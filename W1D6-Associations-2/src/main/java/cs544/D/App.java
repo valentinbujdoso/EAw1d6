@@ -1,7 +1,5 @@
 package cs544.D;
 
-import cs544.C.Course;
-import cs544.C.Student;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -31,7 +29,7 @@ public class App {
         em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        TypedQuery<Customer> query = em.createQuery("from Customer ", Customer.class);
+        TypedQuery<Customer> query = em.createQuery("from Customer2 ", Customer.class);
 
         List<Customer> customerList = query.getResultList();
         for (Customer customer : customerList) {

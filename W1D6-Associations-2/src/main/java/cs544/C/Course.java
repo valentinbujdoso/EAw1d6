@@ -17,14 +17,14 @@ public class Course {
     private String coursenumber;
     private String name;
     @ManyToMany(mappedBy = "courseList")
-    private List<Student> studentList = new ArrayList<>();
+    private List<Student2> studentList = new ArrayList<>();
 
     public Course(String coursenumber, String name) {
         this.coursenumber = coursenumber;
         this.name = name;
     }
 
-    public void addStudent(Student student) {
+    public void addStudent(Student2 student) {
         studentList.add(student);
         if(!student.getCourseList().contains(this)) {
             student.addCourse(this);

@@ -1,7 +1,5 @@
 package cs544.C;
 
-import cs544.B.Book;
-import cs544.B.Publisher;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -17,7 +15,7 @@ public class App {
         EntityManager em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        Student student1 = new Student(1L, "firstname1", "lastname1");
+        Student2 student1 = new Student2(1L, "firstname1", "lastname1");
         Course course1 = new Course("123N", "Course1");
         student1.addCourse(course1);
 
@@ -30,10 +28,10 @@ public class App {
         em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        TypedQuery<Student> query = em.createQuery("from Student ", Student.class);
+        TypedQuery<Student2> query = em.createQuery("from Student2 ", Student2.class);
 
-        List<Student> studentList = query.getResultList();
-        for (Student student : studentList) {
+        List<Student2> studentList = query.getResultList();
+        for (Student2 student : studentList) {
             System.out.println(student);
         }
         em.getTransaction().commit();

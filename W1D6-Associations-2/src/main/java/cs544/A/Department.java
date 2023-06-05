@@ -20,13 +20,13 @@ public class Department {
 
     @EqualsAndHashCode.Exclude
     @OneToMany(mappedBy="department", cascade=CascadeType.PERSIST)
-    private List<Employee> employeeList = new ArrayList<>();
+    private List<Employee2> employeeList = new ArrayList<>();
 
     public Department(String name) {
         this.name = name;
     }
 
-    public void addEmployee(Employee employee) {
+    public void addEmployee(Employee2 employee) {
         employeeList.add(employee);
         employee.setDepartment(this);
     }

@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @EqualsAndHashCode
-public class Employee {
+public class Employee2 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long employeenumber;
@@ -19,7 +19,7 @@ public class Employee {
     private Department department;
 
 
-    public Employee(String name) {
+    public Employee2(String name) {
         this.name = name;
     }
 

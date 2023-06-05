@@ -13,7 +13,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-public class Student {
+public class Student2 {
     @Id
     private Long studetnid;
     private String firstname;
@@ -21,7 +21,7 @@ public class Student {
     @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Course> courseList = new ArrayList<>();
 
-    public Student(Long studetnid, String firstname, String lastname) {
+    public Student2(Long studetnid, String firstname, String lastname) {
         this.studetnid = studetnid;
         this.firstname = firstname;
         this.lastname = lastname;

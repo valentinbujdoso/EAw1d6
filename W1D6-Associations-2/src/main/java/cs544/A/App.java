@@ -17,8 +17,8 @@ public class App {
 
 
         Department dept1 = new Department("Department1");
-        Employee employee1 = new Employee("Employee1");
-        Employee employee2 = new Employee("Employee1");
+        Employee2 employee1 = new Employee2("Employee1");
+        Employee2 employee2 = new Employee2("Employee1");
 
         dept1.addEmployee(employee1);
         dept1.addEmployee(employee2);
@@ -27,7 +27,7 @@ public class App {
 
 
         Department dept2 = new Department("Department2");
-        Employee employee3 = new Employee("Employee3");
+        Employee2 employee3 = new Employee2("Employee3");
 
         dept2.addEmployee(employee3);
 
