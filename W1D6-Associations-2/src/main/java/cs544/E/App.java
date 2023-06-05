@@ -22,10 +22,10 @@ public class App {
         Book2 book2 = new Book2("isbn2", "title2", "author2");
         Book2 book3 = new Book2("isbn3", "title3", "author3");
         Book2 book4 = new Book2("isbn4", "title4", "author4");
-        reservation21.addBook(book1);
-        reservation21.addBook(book2);
-        reservation2.addBook(book3);
-        reservation2.addBook(book4);
+        reservation21.setBook(book1);
+        reservation21.setBook(book2);
+        reservation2.setBook(book3);
+        reservation2.setBook(book4);
         customer21.addReservation(reservation21);
         customer21.addReservation(reservation2);
 

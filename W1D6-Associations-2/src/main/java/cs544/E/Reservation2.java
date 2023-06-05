@@ -15,14 +15,11 @@ public class Reservation2 {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String date;
-    @OneToMany(cascade = CascadeType.PERSIST)
-    private List<Book2> bookList = new ArrayList<>();
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name="book2_isbn")
+    private Book2 book;
 
     public Reservation2(String date) {
         this.date = date;
-    }
-
-    public void addBook(Book2 book) {
-        bookList.add(book);
     }
 }
