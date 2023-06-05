@@ -15,7 +15,7 @@ public class Book {
     private String isbn;
     private String title;
     private String author;
-    @ManyToOne
+    @ManyToOne(cascade=CascadeType.PERSIST)
     @JoinTable(name = "book_publisher",
         joinColumns = { @JoinColumn(name = "publisher_id")},
         inverseJoinColumns = { @JoinColumn(name = "books_id")})

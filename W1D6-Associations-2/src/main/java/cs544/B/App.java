@@ -20,8 +20,9 @@ public class App {
         Book book1 = new Book("isbn1", "title1", "author1", null);
         em.persist(book1);
 
-
-
+        Publisher publisher1 = new Publisher("Publisher1");
+        Book book2 = new Book("isbn2", "title2", "author2", publisher1);
+        em.persist(book2);
 
         em.getTransaction().commit();
         em.close();
@@ -30,11 +31,11 @@ public class App {
         em = emf.createEntityManager();
         em.getTransaction().begin();
 
-        TypedQuery<Department> query = em.createQuery("from Department ", Department.class);
+        TypedQuery<Book> query = em.createQuery("from Book ", Book.class);
 
-        List<Department> departmentList = query.getResultList();
-        for (Department department : departmentList) {
-            System.out.println(department);
+        List<Book> bookList = query.getResultList();
+        for (Book book : bookList) {
+            System.out.println(book);
         }
         em.getTransaction().commit();
         em.close();
